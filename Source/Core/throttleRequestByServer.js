@@ -12,8 +12,8 @@ define([
     var maximumRequestsPerServer = 6;
     var activeRequests = {};
 
-    var pageUri = new Uri(document.location.href);
     function getServer(url) {
+    		var pageUri = new Uri(document.location.href);
         var uri = new Uri(url).resolve(pageUri);
         uri.normalize();
         var server = uri.authority;
